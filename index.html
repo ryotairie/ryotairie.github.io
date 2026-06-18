@@ -305,6 +305,14 @@ nav {
   text-transform: uppercase;
   border-bottom: 1px solid var(--ink-faint);
   font-weight: 200;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-caption {
@@ -407,6 +415,14 @@ nav {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 200;
+  overflow: hidden;
+}
+
+.philosophy-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .philosophy-body p {
@@ -556,6 +572,80 @@ nav {
   font-size: 11px;
 }
 
+.service-role {
+  font-size: 11px;
+  color: var(--ink-light);
+  line-height: 1.9;
+  margin-bottom: 1.8rem;
+}
+
+.service-role span {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.service-role span:not(:last-child)::after {
+  content: '/';
+  margin-left: 0.5rem;
+  color: var(--ink-faint);
+}
+
+.service-price {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+
+.service-price-label {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  font-weight: 200;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* ─── ONGOING RETAINER NOTE ─── */
+.works-note {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--ink-faint);
+}
+
+.works-note-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  font-weight: 200;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.works-note-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.works-note-item {
+  font-size: 12px;
+  color: var(--ink-mid);
+  line-height: 2;
+}
+
+.works-note-item strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
 /* ─── WORKS ─── */
 .works {
   background: var(--paper-warm);
@@ -598,8 +688,8 @@ nav {
 
 .works-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 
 .work-item {}
@@ -621,6 +711,7 @@ nav {
 }
 
 .work-thumb:hover { opacity: 0.8; }
+.work-thumb { text-decoration: none; }
 
 .work-meta {
   display: flex;
@@ -933,7 +1024,7 @@ footer small {
     </blockquote>
   </div>
   <div class="philosophy-right reveal">
-    <div class="philosophy-img">portrait photo</div>
+    <div class="philosophy-img"><img src="images/icon.jpg" alt="入江亮太 ポートレート"></div>
     <div class="philosophy-body">
       <p>職人が道具を握る理由。事業者が続ける理由。日常の一瞬に宿る、誰も気づいていない美しさ。私が見ているのは、表面ではなく本質です。</p>
       <p>時代や流行に左右されない、普遍的な価値を探し、それを映像と写真という言語に翻訳する。制作者ではなくディレクターとして、あなたの思想を、あなたの言葉で、視覚に残す。</p>
@@ -942,7 +1033,7 @@ footer small {
     <div class="philosophy-foot">
       <div>
         <span class="philosophy-name">Ryota Irie</span>
-        <span class="philosophy-role">Visual Director / 入江 涼太</span>
+        <span class="philosophy-role">Visual Director / 入江 亮太</span>
       </div>
       <span class="heritage-badge">Heritage</span>
     </div>
@@ -962,25 +1053,37 @@ footer small {
   </div>
   <div class="services-grid reveal">
     <div class="service-item">
-      <span class="service-num" aria-hidden="true">01</span>
-      <span class="service-en">Brand Film</span>
-      <h3 class="service-title">ブランド映像制作</h3>
-      <p class="service-desc">クライアントの思想・哲学・物語を映像で可視化します。完成品を納品するだけでなく、企画・構成・演出まで一貫してディレクションします。</p>
-      <p class="service-for">こんな方へ<strong>自社の世界観を映像で伝えたい事業者・ブランド</strong></p>
+      <span class="service-num" aria-hidden="true">A</span>
+      <span class="service-en">Archive</span>
+      <h3 class="service-title">記録する</h3>
+      <p class="service-desc">事実を、なくならないように残す。社員インタビュー、経営者インタビュー、お客様の声、イベント記録、セミナー収録など。</p>
+      <p class="service-role">提供価値：「残す」</p>
+      <div class="service-role"><span>撮影者</span><span>聞き手</span><span>編集者</span></div>
+      <p class="service-for">こんな方へ<strong>今ある瞬間や声を、形にして残したい方</strong></p>
+      <span class="service-price-label">Price</span>
+      <p class="service-price">5〜25万円</p>
     </div>
     <div class="service-item">
-      <span class="service-num" aria-hidden="true">02</span>
-      <span class="service-en">Photography</span>
-      <h3 class="service-title">写真撮影</h3>
-      <p class="service-desc">商品、人物、空間、イベント。「何でもない瞬間を、特別な1シーンに」する視点で撮影します。用途に合わせて対応します。</p>
-      <p class="service-for">こんな方へ<strong>ブランドの質感を写真で表現したい方</strong></p>
+      <span class="service-num" aria-hidden="true">B</span>
+      <span class="service-en">Promote</span>
+      <h3 class="service-title">伝える</h3>
+      <p class="service-desc">魅力を、届けたい相手に伝える。会社紹介、サービス紹介、採用動画、店舗紹介など。</p>
+      <p class="service-role">提供価値：「伝える」</p>
+      <div class="service-role"><span>構成作家</span><span>ディレクター</span><span>映像制作者</span></div>
+      <p class="service-for">こんな方へ<strong>自社や店舗の魅力を、的確に届けたい方</strong></p>
+      <span class="service-price-label">Price</span>
+      <p class="service-price">20〜60万円</p>
     </div>
     <div class="service-item">
-      <span class="service-num" aria-hidden="true">03</span>
-      <span class="service-en">Visual Direction</span>
-      <h3 class="service-title">ビジュアルディレクション</h3>
-      <p class="service-desc">映像・写真・デザインの方向性を統合的にディレクションします。「何をどう見せるか」の設計から関わり、ブランドの一貫性を最大化します。</p>
-      <p class="service-for">こんな方へ<strong>発信の一貫性と世界観を整えたい方</strong></p>
+      <span class="service-num" aria-hidden="true">C</span>
+      <span class="service-en">Discover</span>
+      <h3 class="service-title">見つける</h3>
+      <p class="service-desc">本質を、一緒に見つける。ブランドフィルム、コンセプトムービー、ブランドドキュメンタリーなど。</p>
+      <p class="service-role">提供価値：「発見する」</p>
+      <div class="service-role"><span>ブランドディレクター</span><span>伴走者</span><span>翻訳者</span></div>
+      <p class="service-for">こんな方へ<strong>自社の存在意義を、思想から見つめ直したい方</strong></p>
+      <span class="service-price-label">Price</span>
+      <p class="service-price">60〜120万円</p>
     </div>
   </div>
 </section>
@@ -998,22 +1101,44 @@ footer small {
   </div>
   <div class="works-grid reveal">
     <div class="work-item">
-      <div class="work-thumb">▶ play video</div>
+      <a href="https://youtube.com/shorts/E5rcgnwFzNY?feature=share" target="_blank" rel="noopener" class="work-thumb">▶ YouTubeで見る</a>
       <div class="work-meta">
-        <span class="work-tag">Brand Film</span>
-        <span class="work-year">2024</span>
-      </div>
-      <h3 class="work-title">作品タイトルをここに</h3>
-      <p class="work-intent">クライアントの〇〇という思想を、△△という映像表現で可視化しました。時間を経ても色褪せない本質を、一本の映像に収めることを意識しています。</p>
-    </div>
-    <div class="work-item">
-      <div class="work-thumb">▶ play video</div>
-      <div class="work-meta">
-        <span class="work-tag">Photography</span>
+        <span class="work-tag">Documentary / Archive</span>
         <span class="work-year">2025</span>
       </div>
-      <h3 class="work-title">作品タイトルをここに</h3>
-      <p class="work-intent">日常の中に潜む、見過ごされがちな美しさを切り取りました。特別ではない今日を、特別な1シーンとして記録することが、このシリーズの目的です。</p>
+      <h3 class="work-title">木の看板職人のショートドキュメンタリー</h3>
+      <p class="work-intent">自ら職人に声をかけ、交通費のみで実現した自主企画。手仕事に宿る思想と技術を、ショートドキュメンタリーとして記録しました。依頼されて作るのではなく、価値を見つけ、形にする視点がこの作品の出発点です。</p>
+    </div>
+    <div class="work-item">
+      <div class="work-thumb">▶ photo essay</div>
+      <div class="work-meta">
+        <span class="work-tag">Photography / Archive</span>
+        <span class="work-year">2025</span>
+      </div>
+      <h3 class="work-title">炭づくりイベントの記録</h3>
+      <p class="work-intent">地域の有志による炭づくり団体の活動を、フォトエッセイとして記録。参加者の表情や場の空気感を写真で可視化し、地域の手仕事と人の営みが持つ価値を伝えることを意識しました。</p>
+    </div>
+    <div class="work-item">
+      <a href="https://youtu.be/DI4p5VLmn48" target="_blank" rel="noopener" class="work-thumb">▶ YouTubeで見る</a>
+      <div class="work-meta">
+        <span class="work-tag">Documentary / Archive</span>
+        <span class="work-year">2024</span>
+      </div>
+      <h3 class="work-title">三田太鼓 40周年記念ドキュメンタリー</h3>
+      <p class="work-intent">三田市で活動する三田太鼓会に自ら声をかけ、交通費のみで実現した自主企画。40年という節目に積み重ねられてきた地域の文化と、それを支える人々の思いを一本のドキュメンタリーとして記録しました。</p>
+    </div>
+  </div>
+  <div class="works-note reveal">
+    <span class="works-note-label">Ongoing Retainer Work — 契約上、詳細非公開の業務委託実績</span>
+    <div class="works-note-list">
+      <div class="works-note-item">
+        <strong>商品プロモーション動画</strong>
+        月額契約のクライアント企業にて、商品の魅力を伝えるプロモーション映像を継続的に制作。
+      </div>
+      <div class="works-note-item">
+        <strong>ブランディング動画</strong>
+        同社のブランド価値を伝える映像を制作。企画から撮影・編集まで一貫して担当。
+      </div>
     </div>
   </div>
 </section>
@@ -1058,7 +1183,7 @@ footer small {
   <div class="contact-info reveal">
     <div class="contact-info-row">
       <span class="ci-label">Name</span>
-      <span class="ci-val">入江 涼太 / Ryota Irie</span>
+      <span class="ci-val">入江 亮太 / Ryota Irie</span>
     </div>
     <div class="contact-info-row">
       <span class="ci-label">Role</span>
